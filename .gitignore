@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/PointOfSaleSystem/bin/Debug
+/PointOfSaleSystem/obj/Debug
+/PointOfSale.UI/bin/Debug
+/PointOfSale.UI/obj/Debug
+/PointOfSale.Entity/bin/Debug
+/PointOfSale.Entity/obj/Debug
