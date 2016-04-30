@@ -100,6 +100,7 @@
             // 
             // txtProductCode
             // 
+            this.txtProductCode.Enabled = false;
             this.txtProductCode.Location = new System.Drawing.Point(81, 9);
             this.txtProductCode.Name = "txtProductCode";
             this.txtProductCode.Size = new System.Drawing.Size(100, 20);
