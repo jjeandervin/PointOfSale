@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointOfSaleSystem", "PointOfSaleSystem\PointOfSaleSystem.csproj", "{292F0104-4A12-4B99-972F-3B86BACDE61C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointOfSale.Entity", "PointOfSale.Entity\PointOfSale.Entity.csproj", "{23969CD2-D7FA-46A1-8C04-29450206150D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PointOfSale.UI", "PointOfSale.UI\PointOfSale.UI.csproj", "{894E7662-0AA9-4CD9-9624-A0D63096FF39}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{292F0104-4A12-4B99-972F-3B86BACDE61C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{292F0104-4A12-4B99-972F-3B86BACDE61C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{292F0104-4A12-4B99-972F-3B86BACDE61C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{292F0104-4A12-4B99-972F-3B86BACDE61C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23969CD2-D7FA-46A1-8C04-29450206150D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23969CD2-D7FA-46A1-8C04-29450206150D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23969CD2-D7FA-46A1-8C04-29450206150D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23969CD2-D7FA-46A1-8C04-29450206150D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{894E7662-0AA9-4CD9-9624-A0D63096FF39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{894E7662-0AA9-4CD9-9624-A0D63096FF39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{894E7662-0AA9-4CD9-9624-A0D63096FF39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{894E7662-0AA9-4CD9-9624-A0D63096FF39}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
