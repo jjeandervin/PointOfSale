@@ -48,6 +48,9 @@
             // 
             // txtDescription
             // 
+            this.txtDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescription.Location = new System.Drawing.Point(81, 68);
             this.txtDescription.MaxLength = 512;
             this.txtDescription.Multiline = true;
@@ -57,6 +60,7 @@
             // 
             // txtPrice
             // 
+            this.txtPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.txtPrice.Location = new System.Drawing.Point(81, 234);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(84, 20);
@@ -64,6 +68,7 @@
             // 
             // lblPrice
             // 
+            this.lblPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblPrice.AutoSize = true;
             this.lblPrice.Location = new System.Drawing.Point(3, 237);
             this.lblPrice.Name = "lblPrice";
@@ -108,11 +113,12 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(351, 254);
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.Location = new System.Drawing.Point(371, 254);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(55, 23);
             this.btnSave.TabIndex = 8;
-            this.btnSave.Text = "Save";
+            this.btnSave.Text = "OK";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
@@ -130,7 +136,7 @@
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.txtName);
             this.Name = "ProductForm";
-            this.Size = new System.Drawing.Size(571, 345);
+            this.Size = new System.Drawing.Size(448, 293);
             this.ResumeLayout(false);
             this.PerformLayout();
 

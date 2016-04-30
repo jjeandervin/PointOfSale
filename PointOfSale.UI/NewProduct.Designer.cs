@@ -33,16 +33,19 @@
             // 
             // productForm1
             // 
+            this.productForm1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.productForm1.Location = new System.Drawing.Point(13, 13);
             this.productForm1.Name = "productForm1";
-            this.productForm1.Size = new System.Drawing.Size(571, 345);
+            this.productForm1.Size = new System.Drawing.Size(440, 284);
             this.productForm1.TabIndex = 0;
             // 
             // NewProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(628, 352);
+            this.ClientSize = new System.Drawing.Size(465, 303);
             this.Controls.Add(this.productForm1);
             this.Name = "NewProduct";
             this.Text = "NewProduct";

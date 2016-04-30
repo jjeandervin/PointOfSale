@@ -54,14 +54,14 @@ namespace PointOfSale.UI
         {
             get
             {
-                this.UpdateProduct();
+                this.UpdateProductFromForm();
                 return this._product;
             }
 
             set { this._product = value; }
         }
 
-        private void UpdateProduct()
+        private void UpdateProductFromForm()
         {
             this._product.ProductCode = this._productCode;
             this._product.ItemName = this._itemName;
@@ -75,24 +75,10 @@ namespace PointOfSale.UI
             set { this.txtProductCode.Text = value.ToString(); }
         }
 
-        private string _itemName
-        {
-            get { return this.txtName.Text; }
-            set { this.txtName.Text = value; }
-        }
+        private string _itemName => this.txtName.Text;
 
-        private string _description
-        {
-            get { return this.txtDescription.Text; }
-            set { this.txtDescription.Text = value; }
-        }
+        private string _description => this.txtDescription.Text;
 
-        private decimal _price
-        {
-            get { return Convert.ToDecimal(this.txtPrice.Text); }
-            set { this.txtPrice.Text = value.ToString(); }
-        }
-
-       
+        private decimal _price => Convert.ToDecimal(this.txtPrice.Text);
     }
 }

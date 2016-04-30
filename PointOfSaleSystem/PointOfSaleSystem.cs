@@ -14,20 +14,11 @@ namespace PointOfSaleSystem
 {
     public partial class PointOfSaleSystem : Form
     {
-        private readonly IProductWriter productWriter;
-        private readonly IProductCodeProvider productCodeProvider;
-
         public PointOfSaleSystem(IProductWriter productWriter, IProductCodeProvider productCodeProvider)
         {
             InitializeComponent();
-            this.productWriter = productWriter;
-            this.productCodeProvider = productCodeProvider;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form frmNewProduct = new NewProduct(this.productWriter, this.productCodeProvider);
-            frmNewProduct.ShowDialog();
+            this.products1.ProductCodeProvider = productCodeProvider;
+            this.products1.ProductWriter = productWriter;
         }
     }
 }
