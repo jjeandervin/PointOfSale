@@ -8,6 +8,11 @@ namespace PointOfSale.Entity
 
     public partial class Product
     {
+        public Product(IProductCodeProvider productCodeProvider)
+        {
+            this.ProductCode = productCodeProvider.Load();
+        }
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Column("product_code")]

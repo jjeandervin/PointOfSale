@@ -14,9 +14,9 @@ namespace PointOfSaleSystem
     public partial class PointOfSaleSystem : Form
     {
         private readonly IProductWriter productWriter;
-        public PointOfSaleSystem(IProductWriter productWriter)
+        public PointOfSaleSystem(IProductWriter productWriter, IProductCodeProvider productCodeProvider)
         {
-            InitializeComponent();
+            InitializeComponent(productCodeProvider);
             this.productWriter = productWriter;
             this.productForm1.SaveClicked += new EventHandler(ProductSaved_EventHandler);
         }

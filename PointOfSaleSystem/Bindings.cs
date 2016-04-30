@@ -13,6 +13,7 @@ namespace PointOfSaleSystem
         public override void Load()
         {
             this.Bind<IProductWriter>().To<ProductWriter>();
+            this.Bind<IProductCodeProvider>().To<ProductCodeProvider>();
         }
     }
 }

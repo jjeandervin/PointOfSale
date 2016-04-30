@@ -13,9 +13,13 @@ namespace PointOfSale.UI
 {
     public partial class ProductForm : UserControl
     {
-        public ProductForm()
+        private readonly IProductCodeProvider productCodeProvider;
+
+        public ProductForm(IProductCodeProvider productCodeProvider)
         {
             InitializeComponent();
+            this._product = new Product(productCodeProvider);
+            this._productCode = this._product.ProductCode;
         }
 
         private Product _product;
@@ -47,12 +51,8 @@ namespace PointOfSale.UI
         {
             get
             {
-                if (this._product == null)
-                    this._product = new Product();
-
                 this.UpdateProduct();
                 return this._product;
-
             }
 
             set { this._product = value; }

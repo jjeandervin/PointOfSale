@@ -52,8 +52,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Context\PointOfSaleContext.cs" />
+    <Compile Include="IProductCodeProvider.cs" />
     <Compile Include="IProductWriter.cs" />
     <Compile Include="Model\product.cs" />
+    <Compile Include="ProductCodeProvider.cs" />
     <Compile Include="ProductWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

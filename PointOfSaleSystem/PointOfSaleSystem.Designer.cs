@@ -1,4 +1,6 @@
-﻿namespace PointOfSaleSystem
+﻿using PointOfSale.Entity;
+
+namespace PointOfSaleSystem
 {
     partial class PointOfSaleSystem
     {
@@ -26,9 +28,9 @@
         /// Required method for Designer support - do not modify
         /// the contents of this method with the code editor.
         /// </summary>
-        private void InitializeComponent()
+        private void InitializeComponent(IProductCodeProvider productCodeProvider)
         {
-            this.productForm1 = new PointOfSale.UI.ProductForm();
+            this.productForm1 = new PointOfSale.UI.ProductForm(productCodeProvider);
             this.SuspendLayout();
             // 
             // productForm1

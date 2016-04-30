@@ -20,10 +20,11 @@ namespace PointOfSaleSystem
             var kernel = new StandardKernel();
             kernel.Load(Assembly.GetExecutingAssembly());
             var productWriter = kernel.Get<IProductWriter>();
+            var productCodeWriter = kernel.Get<IProductCodeProvider>();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PointOfSaleSystem(productWriter));
+            Application.Run(new PointOfSaleSystem(productWriter, productCodeWriter));
         }
 
     }
