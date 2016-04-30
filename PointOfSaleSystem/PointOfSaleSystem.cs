@@ -8,24 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PointOfSale.Entity;
+using PointOfSale.UI;
 
 namespace PointOfSaleSystem
 {
     public partial class PointOfSaleSystem : Form
     {
         private readonly IProductWriter productWriter;
+        private readonly IProductCodeProvider productCodeProvider;
+
         public PointOfSaleSystem(IProductWriter productWriter, IProductCodeProvider productCodeProvider)
         {
-            InitializeComponent(productCodeProvider);
+            InitializeComponent();
             this.productWriter = productWriter;
-            this.productForm1.SaveClicked += new EventHandler(ProductSaved_EventHandler);
+            this.productCodeProvider = productCodeProvider;
         }
 
-        private void ProductSaved_EventHandler(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            this.productWriter.Write(productForm1.Product);
-            MessageBox.Show(String.Format("Hello, {0} has been saved to the database!", productForm1.Product.ItemName));
+            Form frmNewProduct = new NewProduct(this.productWriter, this.productCodeProvider);
+            frmNewProduct.ShowDialog();
         }
-
     }
 }

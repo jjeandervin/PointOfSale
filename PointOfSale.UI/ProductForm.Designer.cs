@@ -129,7 +129,7 @@
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.txtName);
             this.Name = "ProductForm";
-            this.Size = new System.Drawing.Size(443, 280);
+            this.Size = new System.Drawing.Size(571, 345);
             this.ResumeLayout(false);
             this.PerformLayout();
 

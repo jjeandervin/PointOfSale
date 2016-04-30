@@ -1,8 +1,6 @@
-﻿using PointOfSale.Entity;
-
-namespace PointOfSaleSystem
+﻿namespace PointOfSale.UI
 {
-    partial class PointOfSaleSystem
+    partial class NewProduct
     {
         /// <summary>
         /// Required designer variable.
@@ -30,31 +28,31 @@ namespace PointOfSaleSystem
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAddProduct = new System.Windows.Forms.Button();
+            this.productForm1 = new PointOfSale.UI.ProductForm();
             this.SuspendLayout();
             // 
-            // btnAddProduct
+            // productForm1
             // 
-            this.btnAddProduct.Location = new System.Drawing.Point(12, 232);
-            this.btnAddProduct.Name = "btnAddProduct";
-            this.btnAddProduct.Size = new System.Drawing.Size(75, 23);
-            this.btnAddProduct.TabIndex = 0;
-            this.btnAddProduct.Text = "AddProduct";
-            this.btnAddProduct.UseVisualStyleBackColor = true;
-            this.btnAddProduct.Click += new System.EventHandler(this.button1_Click);
+            this.productForm1.Location = new System.Drawing.Point(13, 13);
+            this.productForm1.Name = "productForm1";
+            this.productForm1.ProductCodeProvider = this.productCodeProvider;
+            this.productForm1.Size = new System.Drawing.Size(571, 345);
+            this.productForm1.TabIndex = 0;
             // 
-            // PointOfSaleSystem
+            // NewProduct
             // 
-            this.ClientSize = new System.Drawing.Size(532, 316);
-            this.Controls.Add(this.btnAddProduct);
-            this.Name = "PointOfSaleSystem";
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(628, 352);
+            this.Controls.Add(this.productForm1);
+            this.Name = "NewProduct";
+            this.Text = "NewProduct";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnAddProduct;
+        private ProductForm productForm1;
     }
 }
-

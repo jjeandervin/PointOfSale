@@ -8,6 +8,9 @@ namespace PointOfSale.Entity
 
     public partial class Product
     {
+        public Product()
+        {}
+
         public Product(IProductCodeProvider productCodeProvider)
         {
             this.ProductCode = productCodeProvider.Load();
