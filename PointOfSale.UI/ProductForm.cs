@@ -19,19 +19,6 @@ namespace PointOfSale.UI
             this._product = new Product();
         }
 
-        private IProductCodeProvider _productCodeProvider;
-
-        public IProductCodeProvider ProductCodeProvider
-        {
-            get { return this._productCodeProvider; }
-            set
-            {
-                this._productCodeProvider = value;
-                this._product.ProductCode = this._productCodeProvider.Load();
-                this._productCode = this._product.ProductCode;
-            }
-        }
-
         private Product _product;
 
         public delegate void ProductSavedHandler();
@@ -56,6 +43,11 @@ namespace PointOfSale.UI
             {
                 OnSaveClicked();
             }
+        }
+
+        public void GetNextProductCode(IProductCodeProvider provider)
+        {
+            this._productCode = provider.Load();
         }
 
         public Product Product

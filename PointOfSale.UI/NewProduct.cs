@@ -14,12 +14,11 @@ namespace PointOfSale.UI
     public partial class NewProduct : Form
     {
         private readonly IProductWriter productWriter;
-        private readonly IProductCodeProvider productCodeProvider;
         public NewProduct(IProductWriter productWriter, IProductCodeProvider productCodeProvider)
         {
-            this.productCodeProvider = productCodeProvider;
             this.productWriter = productWriter;
             InitializeComponent();
+            this.productForm1.GetNextProductCode(productCodeProvider);
             this.productForm1.SaveClicked += new EventHandler(ProductSaved_EventHandler);
         }
 

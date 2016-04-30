@@ -35,7 +35,6 @@
             // 
             this.productForm1.Location = new System.Drawing.Point(13, 13);
             this.productForm1.Name = "productForm1";
-            this.productForm1.ProductCodeProvider = this.productCodeProvider;
             this.productForm1.Size = new System.Drawing.Size(571, 345);
             this.productForm1.TabIndex = 0;
             // 
