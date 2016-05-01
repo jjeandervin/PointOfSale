@@ -45,21 +45,21 @@ namespace PointOfSaleSystem
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.Products);
-            this.tabControl1.Location = new System.Drawing.Point(13, 13);
+            this.tabControl1.Location = new System.Drawing.Point(12, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(660, 344);
+            this.tabControl1.Size = new System.Drawing.Size(661, 344);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(652, 318);
+            this.tabPage1.Size = new System.Drawing.Size(653, 318);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // Products
             // 
@@ -67,7 +67,7 @@ namespace PointOfSaleSystem
             this.Products.Location = new System.Drawing.Point(4, 22);
             this.Products.Name = "Products";
             this.Products.Padding = new System.Windows.Forms.Padding(3);
-            this.Products.Size = new System.Drawing.Size(652, 318);
+            this.Products.Size = new System.Drawing.Size(653, 318);
             this.Products.TabIndex = 1;
             this.Products.Text = "Products";
             this.Products.UseVisualStyleBackColor = true;
@@ -78,10 +78,10 @@ namespace PointOfSaleSystem
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.products1.BackColor = System.Drawing.SystemColors.Control;
-            this.products1.Location = new System.Drawing.Point(0, 0);
+            this.products1.Location = new System.Drawing.Point(-6, -3);
             this.products1.Name = "products1";
-            this.products1.ProductCodeProvider = null;
-            this.products1.Size = new System.Drawing.Size(652, 318);
+            this.products1.ProductManager = null;
+            this.products1.Size = new System.Drawing.Size(653, 318);
             this.products1.TabIndex = 0;
             // 
             // PointOfSaleSystem
@@ -89,6 +89,7 @@ namespace PointOfSaleSystem
             this.ClientSize = new System.Drawing.Size(685, 359);
             this.Controls.Add(this.tabControl1);
             this.Name = "PointOfSaleSystem";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.tabControl1.ResumeLayout(false);
             this.Products.ResumeLayout(false);
             this.ResumeLayout(false);

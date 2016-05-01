@@ -37,11 +37,13 @@
             this.lblProductCode = new System.Windows.Forms.Label();
             this.txtProductCode = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(81, 42);
+            this.txtName.MaxLength = 32;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(184, 20);
             this.txtName.TabIndex = 0;
@@ -114,18 +116,30 @@
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(371, 254);
+            this.btnSave.Location = new System.Drawing.Point(370, 254);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(55, 23);
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "OK";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // btnCancel
+            // 
+            this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCancel.Location = new System.Drawing.Point(289, 254);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 9;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtProductCode);
             this.Controls.Add(this.lblProductCode);
@@ -153,5 +167,6 @@
         private System.Windows.Forms.Label lblProductCode;
         private System.Windows.Forms.TextBox txtProductCode;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

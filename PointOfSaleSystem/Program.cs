@@ -5,6 +5,7 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Ninject;
+using PointOfSale.Bus;
 using PointOfSale.Entity;
 
 namespace PointOfSaleSystem
@@ -18,13 +19,13 @@ namespace PointOfSaleSystem
         static void Main()
         {
             var kernel = new StandardKernel();
-            kernel.Load(Assembly.GetExecutingAssembly());
-            var productWriter = kernel.Get<IProductWriter>();
-            var productCodeWriter = kernel.Get<IProductCodeProvider>();
+            ModuleLoadExtensions.Load(kernel, Assembly.GetExecutingAssembly());
+            var productManager = kernel.Get<IProductManager>();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PointOfSaleSystem(productWriter, productCodeWriter));
+            Application.Run(new PointOfSaleSystem(productManager));
+            
         }
 
     }

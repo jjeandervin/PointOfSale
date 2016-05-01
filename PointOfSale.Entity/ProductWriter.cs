@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,8 +14,24 @@ namespace PointOfSale.Entity
         {
             using (PointOfSaleContext context = new PointOfSaleContext())
             {
-                context.Products.Add(product);
+                context.Products.AddOrUpdate(product);
                 context.SaveChanges();
+            }
+        }
+
+        public void DeleteByProductCode(int productCode)
+        {
+            using (PointOfSaleContext context = new PointOfSaleContext())
+            {
+                Product product = (from p in context.Products
+                                   where p.ProductCode == productCode
+                                   select p).FirstOrDefault();
+
+                if (product != null)
+                {
+                    context.Products.Remove(product);
+                    context.SaveChanges();
+                }
             }
         }
     }

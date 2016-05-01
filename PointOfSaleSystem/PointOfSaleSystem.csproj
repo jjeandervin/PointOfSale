@@ -99,6 +99,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PointOfSale.Bus\PointOfSale.Bus.csproj">
+      <Project>{10259b23-5fe0-4b7a-ad08-56bc15819e01}</Project>
+      <Name>PointOfSale.Bus</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PointOfSale.Entity\PointOfSale.Entity.csproj">
       <Project>{23969cd2-d7fa-46a1-8c04-29450206150d}</Project>
       <Name>PointOfSale.Entity</Name>

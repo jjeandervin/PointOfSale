@@ -11,7 +11,7 @@ namespace PointOfSale.Entity
     {
         private const int StartingCode = 90000001;
 
-        public int Load()
+        public int GenerateNew()
         {
             using (PointOfSaleContext context = new PointOfSaleContext())
             {

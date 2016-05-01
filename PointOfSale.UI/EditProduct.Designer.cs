@@ -1,6 +1,6 @@
 ﻿namespace PointOfSale.UI
 {
-    partial class NewProduct
+    partial class EditProduct
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Text = "NewProduct";
+            this.Text = "EditProduct";
         }
 
         #endregion

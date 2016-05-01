@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace PointOfSale.Entity
 {
-    public interface IProductCodeProvider
+    public interface IProductReader
     {
-        int GenerateNew();
+        IEnumerable<Product> ReadAll();
+
+        Product ReadByProductCode(int productCode);
     }
 }

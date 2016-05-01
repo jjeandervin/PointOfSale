@@ -9,5 +9,7 @@ namespace PointOfSale.Entity
     public interface IProductWriter
     {
         void Write(Product product);
+
+        void DeleteByProductCode(int productCode);
     }
 }

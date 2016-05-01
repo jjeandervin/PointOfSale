@@ -13,7 +13,7 @@ namespace PointOfSale.Entity
 
         public Product(IProductCodeProvider productCodeProvider)
         {
-            this.ProductCode = productCodeProvider.Load();
+            this.ProductCode = productCodeProvider.GenerateNew();
         }
 
         [Key]

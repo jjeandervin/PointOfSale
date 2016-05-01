@@ -7,26 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using PointOfSale.Entity;
+using PointOfSale.Bus;
 
 namespace PointOfSale.UI
 {
-    public partial class NewProduct : Form
+    public partial class NewProduct : ProductBase
     {
-        private readonly IProductWriter productWriter;
-        public NewProduct(IProductWriter productWriter, IProductCodeProvider productCodeProvider)
-        {
-            this.productWriter = productWriter;
-            InitializeComponent();
-            this.productForm1.GetNextProductCode(productCodeProvider);
-            this.productForm1.SaveClicked += new EventHandler(ProductSaved_EventHandler);
-        }
 
-        private void ProductSaved_EventHandler(object sender, EventArgs e)
+        public NewProduct(IProductManager productManager)
         {
-            this.productWriter.Write(productForm1.Product);
-            MessageBox.Show(String.Format("Hello, {0} has been saved to the database!", productForm1.Product.ItemName));
-            this.Close();
+            this._productManager = productManager;
+            InitializeComponent();
+            this.productForm1.GetNextProductCode(this._productManager.ProductCodeProvider);
+            this.productForm1.SaveClicked += new EventHandler(ProductSaved_EventHandler);
+            productForm1.CancelClicked += new EventHandler(CancelClicked_EventHandler);
         }
     }
 }
