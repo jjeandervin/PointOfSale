@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using PointOfSale.Bus;
 using PointOfSale.Entity;
+using PointOfSale.Entity.Model;
 
 namespace PointOfSale.UI
 {
@@ -52,7 +53,8 @@ namespace PointOfSale.UI
             }
             this.lvProducts.AutoResizeColumns(ColumnHeaderAutoResizeStyle.HeaderSize);
             this.SizeLastColumn(this.lvProducts);
-            this.btnDelete.Enabled = this.btnEditProduct.Enabled = this.lvProducts.SelectedItems.Count > 0;
+            bool productSelected = this.btnDelete.Enabled = this.btnEditProduct.Enabled = this.lvProducts.SelectedItems.Count > 0;
+            this.SetDescriptionText(productSelected);
         }
 
         private void listView1_Resize(object sender, System.EventArgs e)

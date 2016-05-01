@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using PointOfSale.Entity.Context;
+using PointOfSale.Entity.Model;
 
 namespace PointOfSale.Entity
 {

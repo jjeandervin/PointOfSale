@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using PointOfSale.Entity;
+using PointOfSale.Entity.Model;
 
 namespace PointOfSale.UI
 {

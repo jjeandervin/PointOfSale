@@ -38,11 +38,13 @@
             this.txtProductCode = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.cbSeller = new System.Windows.Forms.ComboBox();
+            this.lblSeller = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(81, 42);
+            this.txtName.Location = new System.Drawing.Point(81, 35);
             this.txtName.MaxLength = 32;
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(184, 20);
@@ -53,17 +55,17 @@
             this.txtDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDescription.Location = new System.Drawing.Point(81, 68);
+            this.txtDescription.Location = new System.Drawing.Point(81, 61);
             this.txtDescription.MaxLength = 512;
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(345, 160);
+            this.txtDescription.Size = new System.Drawing.Size(304, 122);
             this.txtDescription.TabIndex = 1;
             // 
             // txtPrice
             // 
             this.txtPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.txtPrice.Location = new System.Drawing.Point(81, 234);
+            this.txtPrice.Location = new System.Drawing.Point(81, 189);
             this.txtPrice.Name = "txtPrice";
             this.txtPrice.Size = new System.Drawing.Size(84, 20);
             this.txtPrice.TabIndex = 2;
@@ -72,7 +74,7 @@
             // 
             this.lblPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lblPrice.AutoSize = true;
-            this.lblPrice.Location = new System.Drawing.Point(3, 237);
+            this.lblPrice.Location = new System.Drawing.Point(3, 192);
             this.lblPrice.Name = "lblPrice";
             this.lblPrice.Size = new System.Drawing.Size(31, 13);
             this.lblPrice.TabIndex = 3;
@@ -81,7 +83,7 @@
             // lblDescription
             // 
             this.lblDescription.AutoSize = true;
-            this.lblDescription.Location = new System.Drawing.Point(3, 71);
+            this.lblDescription.Location = new System.Drawing.Point(3, 64);
             this.lblDescription.Name = "lblDescription";
             this.lblDescription.Size = new System.Drawing.Size(60, 13);
             this.lblDescription.TabIndex = 4;
@@ -90,7 +92,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(3, 45);
+            this.lblName.Location = new System.Drawing.Point(3, 38);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(35, 13);
             this.lblName.TabIndex = 5;
@@ -116,7 +118,7 @@
             // btnSave
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSave.Location = new System.Drawing.Point(370, 254);
+            this.btnSave.Location = new System.Drawing.Point(307, 244);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(75, 23);
             this.btnSave.TabIndex = 8;
@@ -127,7 +129,7 @@
             // btnCancel
             // 
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancel.Location = new System.Drawing.Point(289, 254);
+            this.btnCancel.Location = new System.Drawing.Point(226, 244);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(75, 23);
             this.btnCancel.TabIndex = 9;
@@ -135,10 +137,31 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // cbSeller
+            // 
+            this.cbSeller.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cbSeller.FormattingEnabled = true;
+            this.cbSeller.Location = new System.Drawing.Point(81, 215);
+            this.cbSeller.Name = "cbSeller";
+            this.cbSeller.Size = new System.Drawing.Size(121, 21);
+            this.cbSeller.TabIndex = 10;
+            // 
+            // lblSeller
+            // 
+            this.lblSeller.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.lblSeller.AutoSize = true;
+            this.lblSeller.Location = new System.Drawing.Point(3, 218);
+            this.lblSeller.Name = "lblSeller";
+            this.lblSeller.Size = new System.Drawing.Size(33, 13);
+            this.lblSeller.TabIndex = 11;
+            this.lblSeller.Text = "Seller";
+            // 
             // ProductForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblSeller);
+            this.Controls.Add(this.cbSeller);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtProductCode);
@@ -150,7 +173,7 @@
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.txtName);
             this.Name = "ProductForm";
-            this.Size = new System.Drawing.Size(448, 293);
+            this.Size = new System.Drawing.Size(407, 270);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,5 +191,7 @@
         private System.Windows.Forms.TextBox txtProductCode;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.ComboBox cbSeller;
+        private System.Windows.Forms.Label lblSeller;
     }
 }

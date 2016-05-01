@@ -51,20 +51,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context\PointOfSaleContext.cs" />
     <Compile Include="IProductCodeProvider.cs" />
     <Compile Include="IProductReader.cs" />
     <Compile Include="IProductWriter.cs" />
-    <Compile Include="Model\product.cs" />
+    <Compile Include="Model\PointOfSaleContext.cs" />
+    <Compile Include="Model\Product.cs" />
     <Compile Include="ProductCodeProvider.cs" />
     <Compile Include="ProductReader.cs" />
     <Compile Include="ProductWriter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Model\Seller.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
