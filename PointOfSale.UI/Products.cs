@@ -14,6 +14,7 @@ namespace PointOfSale.UI
 {
     public partial class Products : UserControl
     {
+        private IEnumerable<Product> _products;
         public Products()
         {
             InitializeComponent();
@@ -41,8 +42,8 @@ namespace PointOfSale.UI
         private void LoadProductListView()
         {
             this.lvProducts.Items.Clear();
-            IEnumerable<Product> products = this.ProductManager.ProductReader.ReadAll();
-            foreach (var product in products)
+            this._products = this.ProductManager.ProductReader.ReadAll();
+            foreach (var product in _products)
             {
                 ListViewItem item = new ListViewItem(product.ProductCode.ToString());
                 item.SubItems.Add(product.ItemName);
@@ -74,7 +75,19 @@ namespace PointOfSale.UI
 
         private void lvProducts_OnSelectedIndexChanged(object sender, EventArgs e)
         {
-            this.btnDelete.Enabled = this.btnEditProduct.Enabled = this.lvProducts.SelectedItems.Count > 0;
+            bool productSelected = this.btnDelete.Enabled = this.btnEditProduct.Enabled = this.lvProducts.SelectedItems.Count > 0;
+            this.SetDescriptionText(productSelected);
+        }
+
+        private void SetDescriptionText(bool productSelected)
+        {
+            if (productSelected)
+                this.txtDescription.Text =
+                    this._products
+                        .FirstOrDefault(x => x.ProductCode == Convert.ToInt32(this.lvProducts.SelectedItems[0].Text))
+                        .Description;
+            else
+                this.txtDescription.Text = string.Empty;
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
